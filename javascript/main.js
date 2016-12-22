@@ -253,7 +253,7 @@
       const service = new google.maps.places.PlacesService(map);
 
       // service.nearbySearch(request, callback);
-      service.textSearch(request, callback);
+      service.nearbySearch(request, callback);
   });
 
    
@@ -325,7 +325,7 @@
 
   function makeCard(place){
   return `
-<div style="margin-top:10px; margin-bottom:20px; margin-right:10px; text-align:left; float:left; width: 150px;">
+<div style="margin-top:10px; margin-bottom:20px; margin-right:20px; text-align:left; float:left; width: 200px;">
     <span class="card">
       <image width="15" src="${place.icon}"/>  
       <strong>${place.name}</strong> 
