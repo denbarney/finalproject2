@@ -247,11 +247,13 @@
           types: [type]
       };
 
-      const infowindow = new google.maps.InfoWindow();
+      const infowindow = new google.maps.InfoWindow({
+        maxWidth: 400
+      });
       const service = new google.maps.places.PlacesService(map);
 
-      service.nearbySearch(request, callback);
-      // service.textSearch(request, callback);
+      // service.nearbySearch(request, callback);
+      service.textSearch(request, callback);
   });
 
    
@@ -261,6 +263,7 @@
       if (status == google.maps.places.PlacesServiceStatus.OK) {
           for (let i = 0; i < results.length; i++) {
               const place = results[i];
+              console.log(place);
               const request = {
                 placeId: results[i].place_id,
               };
@@ -268,6 +271,7 @@
               service.getDetails(request, function(place){
                 createMarker(place);
                 createHtmlRow(place);
+
               });
           }
       }
@@ -287,8 +291,9 @@
 
   function createMarker(place) {
 
-    var infowindow = new google.maps.InfoWindow({
+    const infowindow = new google.maps.InfoWindow({
       content: makeCard(place)
+
     });
 
 
@@ -303,6 +308,7 @@
       markers.push(marker);
       marker.addListener('click', function() {
         infowindow.open(map, marker);
+        infowindow.setContent(html);
       });
 
 
@@ -319,16 +325,13 @@
 
   function makeCard(place){
   return `
-<div>
-    <div>
+<div style="margin-top:10px; margin-bottom:20px; margin-right:10px; text-align:left; float:left; width: 150px;">
+    <span class="card">
       <image width="15" src="${place.icon}"/>  
       <strong>${place.name}</strong> 
-      <p>${place.formatted_address}</p>
-      
-    </div>
-    <em class="red">${place.rating}</em>
-  </p>
-</div>`;
+      <span><p>${place.formatted_address}</p>
+      ${place.formatted_phone_number}</span>
+    </span>`;
 }
 
   // END SCRIPT THAT WORKS
