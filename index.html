@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sharing the Harlem Experience</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.css">
+    <link rel="stylesheet" type="text/css" href="styles/main2.css">
+</head>
+<body>
+<!-- START HEADER ROW: CCNY ICON AND LINKS -->
+<header>    
+  <div class="ui top menu inverted" style="background-color: #000;">
+    <div class="item">
+      <img class="ui top aligned tiny image" src="assets/citycollegenp_flushleftcity_1.jpg">
+    </div>
+    <a class="item"><span>Sharing the Harlem Experience</span></a>
+    <div class="right item">
+      <div class="ui mini icon input">
+      <input type="text" placeholder="Search...">
+      <i class="search icon"></i>
+      </div>
+
+      </div>  
+
+
+  
+</div>
+  </div>    
+
+    <!--  
+      <div class="ui items">
+        <div class="item">
+          <div class="image">
+            <img src="assets/citycollegenp_flushleftcity_1.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Sharing the Harlem Experience</a>
+            <div class="meta">
+              <span>Harlem Business Guide</span>
+            </div>
+            <div class="description">
+              <p></p>
+            </div>
+            <div class="extra">
+             Division of Government, Community, and Cultural Affairs
+            </div>
+          </div>
+        </div>
+</div>
+</header> 
+
+<!-- End of HEADER ROW -->
+
+<!-- START CAPTION -->
+    <div class="ui segment center aligned">
+    <p>Thank you for viewing the Harlem Business Guide. Click on the links below to find businesses in The City College community.</p>
+    </div>
+
+<!-- END CAPTION -->
+
+<!-- START MAP -->
+<div class="ui grid">
+  <div class="centered twelve wide column">
+    <div id="map"></div>
+  </div>
+</div>
+
+<!-- END MAP -->
+
+<!-- START MENU -->
+
+<div class="ui inverted menu">
+        <a class="item typebtn js-restaurant" id="restaurant">
+        Restaurants
+        </a>
+<!--        <a class="item typebtn js-arts">
+        Arts &amp; Culture
+        </a> -->
+        <a class="item typebtn js-lodging" id="lodging">
+        Lodging
+        </a>
+        <a class="item typebtn js-rec" id="park">
+        Parks &amp; Recreation
+        </a>
+<!--        <a class="item typebtn js-worship">
+        Places of Worship
+        </a> -->
+        <a class="item typebtn js-financial" id="bank">
+        Financial Institutions
+        </a>
+        <a class="item typebtn js-health" id="hospital">
+        Health
+        </a>
+        <a class="item typebtn js-beauty" id="gym">
+        Beauty &amp; Fitness
+        </a>
+        <a class="item typebtn js-GCO" id="local_government_office">
+        Government &amp; Community Organizations
+        </a>
+</div>
+<div class="item mywindow js-container">
+<div id='places'></div>
+ </div>
+
+<!-- CONTENT STYLE 
+Example
+<div class="ui items">
+  <div class="item">
+    <div class="ui small image">
+      <img src="/images/wireframe/image.png">
+    </div>
+    <div class="content">
+      <div class="header">Arrowhead Valley Camp</div>
+      <div class="meta">
+        <span class="price">$1200</span>
+        <span class="stay">1 Month</span>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+  </div>
+
+<div class="ui bottom attached segment">
+  <div class="ui grid">
+  <div id="map" class="float left ten wide column"></div>
+  <div class="float right six wide column">
+    <div class="ui items">
+  <div class="item">
+    <div class="ui small image">
+      <img src="/images/wireframe/image.png">
+    </div>
+    <div class="content">
+      <div class="header">Arrowhead Valley Camp</div>
+      <div class="meta">
+        <span class="price">$1200</span>
+        <span class="stay">1 Month</span>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="ui small image">
+      <img src="/images/wireframe/image.png">
+    </div>
+    <div class="content">
+      <div class="header">Buck's Homebrew Stayaway</div>
+      <div class="meta">
+        <span class="price">$1000</span>
+        <span class="stay">2 Weeks</span>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="ui small image">
+      <img src="/images/wireframe/image.png">
+    </div>
+    <div class="content">
+      <div class="header">Astrology Camp</div>
+      <div class="meta">
+        <span class="price">$1600</span>
+        <span class="stay">6 Weeks</span>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<!-- END MENU  -->
+
+<!-- START CONTENT -->
+
+
+<!-- START FOOTER -->
+<div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="five wide column">
+          <h4 class="ui inverted header">About</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Government, Community, and Cultural Affairs</a>
+            <a href="#" class="item">The City College of New York</a>
+            <a href="#" class="item">Contact Us</a>
+           
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Sharing the Harlem Experience</h4>
+          <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- END FOOTER -->
+
+<!-- pusher -->
+    <script type="text/javascript" src='javascript/data.js'></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd-hQBzbOUihAVIpPzyKWYnbPagdj4jmE&libraries=places,geometry,drawing&callback=initMap"
+    async defer></script>
+  
+
+
+
+    
+    <script type="text/javascript" src="javascript/main.js"></script>
+</body>
+</html>
