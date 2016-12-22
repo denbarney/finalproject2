@@ -1,18 +1,14 @@
 #map {
 	width: 100%;
-	max-height: 370px;
+	max-height: 400px;
 	height: 100%
 	margin: 5px;
-    padding: 2px;
-    /*border: 3px solid #979797;*/
+    padding: 10px;
+    border: 1px solid #979797;
     border-radius: 8px;
-    .shadow {
-   -moz-box-shadow:    inset 0 0 10px #000000;
-   -webkit-box-shadow: inset 0 0 10px #000000;
-   box-shadow:         inset 0 0 10px #000000;
+   
 }
 
-}
 
 #html {
 	max-height: 100%;
@@ -22,9 +18,10 @@
 div {
 	font-family: 'Cabin', sans-serif;
 }
+
 .mywindow {
 	min-height: 100px;
-	max-height: 600px;
+	max-height: 400px;
 	overflow: scroll;
 	
 }
@@ -37,51 +34,22 @@ div {
 	overflow: scroll;
 }
 
-.red {
-	color: red;
+.footy {
+	margin-right: 40px;
 }
-
-.info {
-	margin-top: 5px;
-	margin-bottom: 10px;
-	padding: 10px;
-	
-
-	
-	
-	/*min-height: 0px;*/
-	
-	
-}
-
-/*.js-container {*/
-	/*display: inline-block;*/
-	/*padding: 2px;*/
-/**/
-/*}*/
 
 .js-container {
 
 	margin: 10px;
-	/*margin-bottom: 10px;*/
-	/*padding-bottom: 10px;*/
-	/*margin-top: 10px;*/
-	/*padding: 10px;*/
 	overflow: auto;
-	/*display: inline-block;*/
-	/*overflow: scroll;*/
-	/*max-height: 300px;*/
-	width: 1000px;
-/*	margin-left: 20px;*/
-
-
+	width: 800px;
+	font-family: 'Cabin', sans-serif;
+	max-height: 200px;
 
 }
 
+.boxy {
+	max-height: 250px;
+}
 
 
-/*<div class="ui inverted vertical footer segment">*/
-    /*<div class="ui container">*/
-        /*TotesEmoshe 2015. All Rights Reserved*/
-    /*</div>*/
-/*</div>*/

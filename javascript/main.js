@@ -174,40 +174,6 @@
   }
 
 
-  // const service = new google.maps.places.PlacesService(map);
-  // service.nearbySearch(request, callback);
-
-
-
-  // const infowindow;
-
-  // $('.typebtn').click(function(e) {
-  //  console.log($(this)[0].id);
-  //  const type=($(this)[0].id)
-
-  // function performSearch()
-  // {
-  //   const request = {
-  //     location: myLatLng,
-  //     radius: '500',
-  //     types: [type]
-  // }
-  // service.nearbySearch(request, handleSearchResults);
-  // }
-
-  // function handleSearchResults(results, status){
-  //   console.log(results);
-  // }
-
-
-
-
-  //  google.maps.event.addListenerOnce(map, performSearch, 'click', function(e)){
-  //           infowindow.setContent(place.name);
-  //           infowindow.open(map, this);
-  //         });
-  //       }
-
   // START SCRIPT THAT WORKS
 
   function setMapOnAll(map) {
@@ -243,12 +209,12 @@
 
       const request = {
           location: myLatLng,
-          radius: '550',
+          radius: '600',
           types: [type]
       };
 
       const infowindow = new google.maps.InfoWindow({
-        maxWidth: 400
+        maxWidth: 200
       });
       const service = new google.maps.places.PlacesService(map);
 
@@ -312,22 +278,14 @@
       });
 
 
-      // google.maps.event.addListenerOnce(map, marker, 'click', function(e) {
-      //     infowindow.setContent(place.name);
-      //     infowindow.open(map, this);
-      // });
   }
-   // Deletes all markers in the array by removing references to them.
-      // function deleteMarkers() {
-      //   clearMarkers();
-      //   markers = [];
-      // }
+
 
   function makeCard(place){
   return `
 <div style="margin-top:10px; margin-bottom:20px; margin-right:20px; text-align:left; float:left; width: 200px;">
     <span class="card">
-      <image width="15" src="${place.icon}"/>  
+      <image width="10" src="${place.icon}"/>  
       <strong>${place.name}</strong> 
       <span><p>${place.formatted_address}</p>
       ${place.formatted_phone_number}</span>
@@ -336,63 +294,4 @@
 
   // END SCRIPT THAT WORKS
 
-  //  function addMarker(place) {
-  //   const marker = new google.maps.Marker({
-  //     map: map,
-  //     position: place.geometry.location,
-  //     icon: {
-  //       url: 'https://developers.google.com/maps/documentation/javascript/images/circle.png',
-  //       anchor: new google.maps.Point(10, 10),
-  //       scaledSize: new google.maps.Size(10, 17)
-  //     }
-  //   });
-
-  //   google.maps.event.addListener(marker, 'click', function() {
-  //     service.getDetails(place, function(result, status) {
-  //       if (status !== google.maps.places.PlacesServiceStatus.OK) {
-  //         console.error(status);
-  //         return;
-  //       }
-  //       infoWindow.setContent(result.name);
-  //       infoWindow.open(map, marker);
-  //     });
-  //   });
-  // }
-
-  // function callback(results, status) {
-  //   if (status == google.maps.places.PlacesServiceStatus.OK) {
-  //     const marker = new google.maps.Marker({
-  //       map: map,
-  //       place: {
-  //         placeId: results[0].place_id,
-  //         location: results[0].geometry.location
-  //       }
-  //     });
-  //   }
-  // }
-
-
-  // function callback(results, status) {
-  //     if (status == google.maps.places.PlacesServiceStatus.OK) {
-  //         for (let i = 0; i < results.length; i++) {
-  //             const place = results[i];
-  //             const request = place.place_id;
-  //             const service = new google.maps.places.PlacesService(map);
-  //             service.getDetails(request, callback);
-
-  //             function callback(place, status) {
-  //             if (status == google.maps.places.PlacesServiceStatus.OK) {
-  //               createMarker(place);
-  //             }
-  //           }
-            
-  //             createMarker(place);
-  //             createHtmlRow(place);
-  //             getinfo(place);
-
-  //         }
-  //     }
-  // }
-  // console.log(callback);
-
-  // I want the user to click on something and grab what they are looking for
+ 
