@@ -261,9 +261,14 @@
       if (status == google.maps.places.PlacesServiceStatus.OK) {
           for (let i = 0; i < results.length; i++) {
               const place = results[i];
-              console.log(place)
-              createMarker(place);
-              createHtmlRow(place);
+              const request = {
+                placeId: results[i].place_id,
+              };
+              service = new google.maps.places.PlacesService(map);
+              service.getDetails(request, function(place){
+                createMarker(place);
+                createHtmlRow(place);
+              });
           }
       }
   }
@@ -273,11 +278,12 @@
     const container = $('.js-container');
 
     const htmlToAdd = makeCard(place);
-    console.log(htmlToAdd)
+    console.log('object: ', htmlToAdd) 
 
     container.append(htmlToAdd) 
   }
 
+    // const placeId = [place.place_id]
 
   function createMarker(place) {
 
@@ -290,6 +296,7 @@
           map: map,
           position: place.geometry.location,
           title: place.name,
+
        
       });
 
@@ -313,10 +320,12 @@
   function makeCard(place){
   return `
 <div>
-  <p>
-    <image width="30" src="data:image/png;base64,${place.photos[0].photo_reference}"/>  
-    <strong>${place.name}</strong>
-
+    <div>
+      <image width="15" src="${place.icon}"/>  
+      <strong>${place.name}</strong> 
+      <p>${place.formatted_address}</p>
+      
+    </div>
     <em class="red">${place.rating}</em>
   </p>
 </div>`;
@@ -360,6 +369,27 @@
   // }
 
 
+  // function callback(results, status) {
+  //     if (status == google.maps.places.PlacesServiceStatus.OK) {
+  //         for (let i = 0; i < results.length; i++) {
+  //             const place = results[i];
+  //             const request = place.place_id;
+  //             const service = new google.maps.places.PlacesService(map);
+  //             service.getDetails(request, callback);
 
+  //             function callback(place, status) {
+  //             if (status == google.maps.places.PlacesServiceStatus.OK) {
+  //               createMarker(place);
+  //             }
+  //           }
+            
+  //             createMarker(place);
+  //             createHtmlRow(place);
+  //             getinfo(place);
+
+  //         }
+  //     }
+  // }
+  // console.log(callback);
 
   // I want the user to click on something and grab what they are looking for
